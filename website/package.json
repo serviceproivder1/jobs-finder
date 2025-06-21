@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "node tools/generate-llms.js || true && vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -48,3 +51,4 @@
     "vite": "^4.4.5"
   }
 }
+
